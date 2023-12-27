@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Loader from "react-js-loader";
 
 export default function Weather(props) {
   function handleResponse(response) {
@@ -12,5 +13,5 @@ export default function Weather(props) {
 
   axios.get(apiUrl).then(handleResponse);
 
-  return <h2>Hello from Weather!</h2>;
+  return <Loader type="bubble-scale" color="blue" size={100} />;
 }
